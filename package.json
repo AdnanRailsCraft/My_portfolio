@@ -1,0 +1,11 @@
+{
+  "name": "adnan-khan-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio for Adnan Khan",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [],
+  "author": "Adnan Khan",
+  "license": "ISC"
+}

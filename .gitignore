@@ -1,0 +1,12 @@
+# Vercel & Node
+node_modules/
+.vercel
+.next/
+dist/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Redundant assets
+profile.png
