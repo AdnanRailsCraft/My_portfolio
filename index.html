@@ -271,7 +271,7 @@
         /* ========================================
            NAVIGATION — 3D ANIMATED
            ======================================== */
-        nav {
+        #navbar {
             position: fixed;
             top: var(--space-4);
             left: 50%;
@@ -281,13 +281,10 @@
             z-index: var(--z-sticky);
             padding: 0.75rem var(--space-8);
             transition: all var(--transition-base);
-            /* 3D animated gradient border */
-            border: 1px solid transparent;
-            border-image: linear-gradient(135deg, rgba(0,229,160,0.3), rgba(79,142,247,0.3), rgba(168,85,247,0.3), rgba(0,229,160,0.3)) 1;
             border-radius: var(--radius-full);
         }
 
-        nav::before {
+        #navbar::before {
             content: '';
             position: absolute;
             inset: -1px;
@@ -302,7 +299,7 @@
         }
 
         /* Animated gradient background with parallax depth */
-        nav::after {
+        #navbar::after {
             content: '';
             position: absolute;
             inset: 0;
@@ -374,7 +371,7 @@
         }
 
         /* Scrolled state */
-        nav.scrolled {
+        #navbar.scrolled {
             top: var(--space-2);
             padding: 0.6rem var(--space-8);
             background: rgba(5, 10, 20, 0.7);
@@ -383,25 +380,24 @@
             box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 60px rgba(0,229,160,0.05);
         }
 
-        nav.scrolled::before {
+        #navbar.scrolled::before {
             background: linear-gradient(135deg, rgba(0,229,160,0.5), rgba(79,142,247,0.4), rgba(168,85,247,0.5), rgba(0,229,160,0.5));
         }
 
         /* Light mode nav */
-        [data-theme="light"] nav {
+        [data-theme="light"] #navbar {
             background: rgba(255,255,255,0.7);
             backdrop-filter: blur(20px) saturate(150%);
             -webkit-backdrop-filter: blur(20px) saturate(150%);
-            border-image: linear-gradient(135deg, rgba(5,150,105,0.3), rgba(59,130,246,0.3), rgba(139,92,246,0.3), rgba(5,150,105,0.3)) 1;
         }
-        [data-theme="light"] nav::before {
+        [data-theme="light"] #navbar::before {
             background: linear-gradient(135deg, rgba(5,150,105,0.35), rgba(59,130,246,0.25), rgba(139,92,246,0.35), rgba(5,150,105,0.35));
         }
-        [data-theme="light"] nav.scrolled {
+        [data-theme="light"] #navbar.scrolled {
             background: rgba(255,255,255,0.9);
             box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 0 40px rgba(5,150,105,0.08);
         }
-        [data-theme="light"] nav::after {
+        [data-theme="light"] #navbar::after {
             background:
                 radial-gradient(ellipse 80% 60% at 20% 30%, rgba(5,150,105,0.08) 0%, transparent 60%),
                 radial-gradient(ellipse 60% 80% at 80% 70%, rgba(59,130,246,0.06) 0%, transparent 50%),
@@ -409,13 +405,13 @@
         }
 
         @media (max-width: 768px) {
-            nav {
+            #navbar {
                 top: var(--space-3);
                 width: calc(100% - var(--space-6));
                 padding: 0.6rem var(--space-5);
                 border-radius: var(--radius-full);
             }
-            nav.scrolled { top: var(--space-2); padding: 0.5rem var(--space-5); }
+            #navbar.scrolled { top: var(--space-2); padding: 0.5rem var(--space-5); }
         }
 
         /* ========================================
